@@ -1,5 +1,5 @@
 class Asiento:
-    def __init__(self, precio, registro, color):
+    def __init__(self, color, precio, registro):
         self.precio = precio
         self.registro = registro
         self.color = color
@@ -45,4 +45,3 @@ class Auto:
             return "Auto original"
         else:
             return "Las Piezas no son originales"
-
