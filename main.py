@@ -35,7 +35,11 @@ class Auto:
         Auto.cantidadCreados += 1  # Incrementar la cantidad de autos creados
 
     def cantidadAsientos(self):
-        return len(self.asientos)
+        count = 0
+        for asiento_obj in self.asientos:
+            if isinstance(asiento_obj, Asiento):
+                count += 1
+        return count
     
     def verificarIntegridad(self): 
         if self.motor.registro == self.registro:
