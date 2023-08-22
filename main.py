@@ -45,7 +45,7 @@ class Auto:
         if self.motor.registro == self.registro:
             for asiento_obj in self.asientos:
                 if isinstance(asiento_obj, Asiento) and asiento_obj.registro != self.registro:
-                    return "Las Piezas no son originales"
+                    return "Las piezas no son originales"
             return "Auto original"
         else:
-            return "Las Piezas no son originales"
+            return "Las piezas no son originales"
