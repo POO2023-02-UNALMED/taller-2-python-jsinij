@@ -1,4 +1,4 @@
-class asiento:
+class Asiento:
     def __init__(self, precio, registro, color):
         self.precio = precio
         self.registro = registro
@@ -11,7 +11,7 @@ class asiento:
         else:
             return "Ese color no está disponible"
 
-class motor: 
+class Motor: 
     def __init__ (self, numeroCilindros, tipo, registro): 
         self.numeroCilindros = numeroCilindros
         self.tipo = tipo
@@ -25,7 +25,7 @@ class motor:
         if nuTipo.lower() in tiposper: 
             self.tipo = nuTipo 
 
-class auto: 
+class Auto: 
     cantidadCreados = 0 
     def __init__(self, modelo, precio, asientos, marca, motor, registro): 
         self.modelo = modelo 
@@ -34,7 +34,7 @@ class auto:
         self.marca = marca
         self.motor = motor
         self.registro = registro
-        auto.cantidadCreados += 1  # Incrementar la cantidad de autos creados
+        Auto.cantidadCreados += 1  # Incrementar la cantidad de autos creados
 
     def cantidadAsientos(self):
         return len(self.asientos)
@@ -42,7 +42,7 @@ class auto:
     def verificarIntegridad(self): 
         if self.motor.registro == self.registro:
             for asiento_obj in self.asientos:
-                if isinstance(asiento_obj, asiento) and asiento_obj.registro != self.registro:
+                if isinstance(asiento_obj, Asiento) and asiento_obj.registro != self.registro:
                     return "Las Piezas no son originales"
             return "Auto original"
         else:
