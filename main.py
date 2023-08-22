@@ -8,8 +8,6 @@ class Asiento:
         colores_permitidos = ["negro", "amarillo", "verde", "rojo", "blanco"]
         if color.lower() in colores_permitidos:
             self.color = color
-        else:
-            return "Ese color no está disponible"
 
 class Motor: 
     def __init__ (self, numeroCilindros, tipo, registro): 
